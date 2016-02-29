@@ -40,6 +40,9 @@ var Payeezy = function() {
             var n = "api-cert.payeezy.com";
             this["clientCallback"] = e;
             var r = t();
+            if (!!this.ccData) {
+              r = this.ccData;
+            }
             var i = 0;
             var s = {};
             var o = 0;
@@ -80,6 +83,9 @@ var Payeezy = function() {
             var f = document.createElement("script");
             f.src = a;
             document.getElementsByTagName("head")[0].appendChild(f)
+        },
+        setCCData: function(e) {
+            this["ccData"] = e
         },
         setApiKey: function(e) {
             this["apikey"] = e
